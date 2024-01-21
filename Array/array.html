@@ -96,7 +96,58 @@
       };
       console.log(twoArray([1, 3], [1, 3]));
 
-      //How to sort an array in ascending and descending order?
+      // Map
+      // const people = [
+      //   { name: 'Alice', age: 25 },
+      //   { name: 'Bob', age: 30 },
+      //   { name: 'Charlie', age: 22 },
+      // ];
+      // const peopleName = people.map(function (el) {
+      //   return el.name;
+      // });
+      // console.log(peopleName);
+
+      //Polyfill of the map
+      //what is map?
+      //(map has been return each and every value and modifies it according to this condition)
+
+      // Array.map((num, i, arr) => {});
+
+      //current value,index,array(num,i,arr)
+
+      Array.prototype.myMap = function (callback) {
+        let temp = [];
+        for (let i = 0; i < this.length; i++) {
+          temp.push(callback(this[i], i, this));
+        }
+        return temp;
+      };
+
+      const nums = [1, 2, 3, 4, 5, 6];
+      const multiplyThree = nums.myMap((nums, i, arr) => {
+        return nums * 3;
+      });
+      console.log(multiplyThree);
+
+      //What is filter?
+      //filter retrun  only those value whose condition are satisfied on the callback
+
+      //Polyfill of the filter(filter only return )
+
+      Array.prototype.myfilter = function (callback) {
+        let temp = [];
+        for (let i = 0; i < this.length; i++) {
+          if (callback(this[i], i, this)) temp.push(this[i]);
+        }
+        return temp;
+      };
+      const numbers = [1, 2, 3, 4];
+      const moreThanTwo = numbers.filter((num) => {
+        return numbers > 2;
+      });
+      console.log(moreThanTwo);
+
+      //Reduce
     </script>
   </body>
 </html>
