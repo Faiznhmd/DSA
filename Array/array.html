@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const arr = [1, 2, 3, 4, 'HELLO', { name: 'Faizan' }, [5, 6, 7, 8], 'OP'];
+      console.log(arr);
+
+      //How do you  Access first and last index of an Array
+      console.log(arr[0]); //Accessing the first element
+
+      console.log(arr[arr.length - 1]); //Access the last element
+
+      console.log(arr.pop()); //Another method of accessing lst element
+
+      //Add Element of an end of an Array
+      arr.push('Ahmad');
+      console.log(arr);
+
+      //Add Element of an Starting of an Array
+      arr.unshift('Hii There');
+      console.log(arr);
+
+      //Deleting element of an starting of an Array
+      arr.shift();
+      console.log(arr);
+
+      //1, How  do you check if an Element is exits in an Array or Not?
+      const findElement = (arr, target) => {
+        for (let x of arr) {
+          if (x === target) {
+            return true;
+          }
+        }
+        return false;
+      };
+      console.log(findElement(arr, 'HELLO'));
+      console.log(findElement(arr, 'he'));
+      //There is another way to print the value in findelement is (Includes)
+      console.log(arr.includes('HELLO'));
+
+      // 2. How do you check if an element exists in an array also his index
+
+      const findElementIndex = (arr, target) => {
+        for (i = 0; i < arr.length; i++) {
+          if (arr[i] === target) {
+            return i;
+          }
+        }
+        return -1;
+      };
+      console.log(findElementIndex(arr, 'HELLO'));
+      console.log(findElementIndex(arr, 'OP'));
+      console.log(findElementIndex(arr, 4));
+      //ANother way to access
+      console.log(arr.indexOf(4));
+
+      // How to Delete and Add and update from specific index
+      console.log(arr);
+      arr.splice(1, 3); //Delete
+      console.log(arr);
+
+      //Shalow copy and Deep Copy of Array watch
+
+      // 3. How to Add two array in js
+
+      //first method
+
+      const add = ['h', 'd', 'd', 'w', 'r', 'h', 'g', 'w'];
+      const newArray = [...arr, ...add];
+      console.log(newArray);
+
+      //Second Method using concat
+      const newArray2 = arr.concat(add);
+      console.log(newArray2);
+
+      // 4. How to check if two arrays are equal or not
+      const twoArray = (arr1, arr2) => {
+        // if (arr1.length !== arr2.length) {
+        //   return false;
+        // }
+        // for (let i = 0; i < arr1.length; i++) {
+        //   if (arr1[i] !== arr2[i]) {
+        //     return false;
+        //   }
+        // }
+        // return true;
+        return (
+          arr1.length === arr2.length &&
+          arr1.every((ele, i) => arr1[i] === arr2[i])
+        );
+      };
+      console.log(twoArray([1, 3], [1, 3]));
+
+      //How to sort an array in ascending and descending order?
+    </script>
+  </body>
+</html>
