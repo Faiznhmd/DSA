@@ -165,6 +165,43 @@
         return acc + curr;
       });
       console.log(sum);
+
+      // Return only name of students in capital
+      //map question
+      const students = [
+        { name: 'faizan', rollNo: '1', marks: 85 },
+        { name: 'Ahmad', rollNo: '55', marks: 92 },
+        { name: 'github', rollNo: '13', marks: 58 },
+        { name: 'here', rollNo: '3', marks: 42 },
+      ];
+      // let name = [];
+      // for (i = 0; i < students.length; i++) {
+      //   name.push(students[i].name.toUpperCase());
+      // }
+      const name = students.map((stu) => stu.name.toUpperCase());
+      console.log(name);
+
+      //filter question(marks should be greater than 60)
+
+      const details = students.filter((stu) => stu.marks > 60);
+      console.log(details);
+
+      // filter(marks should be greater than 60 and roll 15)
+
+      const detail = students.filter(
+        (stu) => stu.marks > 60 && stu.rollNo > 15
+      );
+      console.log(detail);
+
+      // sum  of marks(reduce)
+      const sums = students.reduce((acc, curr) => acc + curr.marks, 0);
+      console.log(sums);
+
+      // Return only names of students who scored more than 60
+      const names = students
+        .filter((stu) => stu.marks > 60)
+        .map((stu) => stu.name);
+      console.log(names);
     </script>
   </body>
 </html>
