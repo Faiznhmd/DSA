@@ -148,6 +148,23 @@
       console.log(moreThanTwo);
 
       //Reduce
+      //its take a callback and initial value
+      //arr.reduce((acc,curr,i,arr)=>{},initialValue)
+      //accumulater,current,index,array
+      Array.prototype.myReduce = function (callback, initialValue) {
+        var accumulater = initialValue;
+        for (let i = 0; i < this.length; i++) {
+          accumulater = accumulater
+            ? callback(accumulater, this[i], i, this)
+            : this[i];
+        }
+        return accumulater;
+      };
+      const num = [1, 2, 3, 4, 5];
+      const sum = num.myReduce((acc, curr, i, arr) => {
+        return acc + curr;
+      });
+      console.log(sum);
     </script>
   </body>
 </html>
