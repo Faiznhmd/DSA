@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Delete Element an array
+      let data = [1, 2, 3, 4, 5];
+      let position = 2;
+      //-1 on data.length because in last undefined is present when we apply for loop
+      for (let i = 2; i < data.length - 1; i++) {
+        // console.log(data[i]);
+        data[i] = data[i + 1];
+      }
+      data.length = data.length - 1; //the last index is repeating two times hence we apply this method
+      console.log(data);
+    </script>
+  </body>
+</html>
