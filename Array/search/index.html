@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //serach Element
+      //Linear Serach(one by one search)
+      let data = [23, 54, 77, 98, 23.8, 40, 10, 20, 30];
+      let Element = 23.8;
+      let index = undefined;
+      for (i = 0; i < data.length; i++) {
+        // console.log(data[i]);
+        if (data[i] === Element) {
+          index = i;
+          break;
+          //break means uska baad loop ni chalega
+        }
+      }
+      data.splice(4, 1); ///4 is index and 1 is how many elemment you want to delete
+      console.log(data);
+      console.log(index);
+    </script>
+  </body>
+</html>
