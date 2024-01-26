@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //`${}`Template lateral
+
+      //Modifying string
+      const str = 'Hello this side faizan ';
+      console.log(str.replace('faizan', 'faiz'));
+
+      //concat
+      const newstr = str.concat(' How are you');
+      console.log(newstr);
+
+      //searching inside the string
+      console.log(str.indexOf('a'));
+
+      //substring(extracting substring)
+      console.log(str.substring(11));
+
+      //if  the particular string are present or not
+      console.log(str.includes('faiz'));
+      console.log(str.includes('ji'));
+
+      //splitting or joining strings
+
+      console.log(str.split(''));
+      console.log(str.split('e'));
+      //when e is there the string is split
+
+      //join
+      const arr = ['apple', 'banana'];
+      console.log(arr.join(' and '));
+    </script>
+  </body>
+</html>
