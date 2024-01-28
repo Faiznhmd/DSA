@@ -14,7 +14,7 @@
       console.log(str.replace('faizan', 'faiz'));
 
       //concat
-      const newstr = str.concat(' How are you');
+      const newstr = str.concat(' How are you i am here');
       console.log(newstr);
 
       //searching inside the string
@@ -51,7 +51,46 @@
 
       //index
       console.log(name.indexOf('i'));
+      console.log(name.indexOf('z'));
       // console.log(name.lastIndexOf('i'));
+
+      //localcompre(compare two strings)
+
+      let anotherName = 'Faizan';
+      let anotherNames = 'Ahmad';
+
+      console.log(name.localeCompare(anotherName));
+      console.log(name.localeCompare(anotherNames));
+      //same string 0
+      //another string 1
+
+      //replace method
+      const description = 'Faizan is a developer';
+      console.log(description.replace('Faizan', 'Ahamd'));
+
+      //substring
+      console.log(description.substring(4));
+
+      //splice
+      console.log(description.slice(3, 7));
+
+      //split
+      //it also give an array and it split in a single word
+      console.log(description.split(''));
+
+      //trim (remove space from start and end of a string)
+
+      //tostring
+      const num = 123;
+      console.log(num, num.toString());
+
+      //convert obj to string
+      const obj = {
+        name: 'faizan',
+        email: 'fianf@gmail.com',
+        age: 23,
+      };
+      console.log(obj, JSON.stringify(obj));
     </script>
   </body>
 </html>
